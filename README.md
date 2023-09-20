@@ -2,7 +2,7 @@
 
 ## Grade: 0/100
 
-###  Demonstration:
+### Demonstration:
 
 ### Overview
 
@@ -11,6 +11,9 @@
 ###  Subject (v5): [libasm en_subject](./extras/en.subject_libasm.pdf)
 
 ## Useful links
+[You Can Learn Assembly in 10 Minutes (it’s easy)](https://www.youtube.com/watch?v=jPDiaZS-2ok)  
+[Linux System Call Table for x86 64](http://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)  
+man 2 syscalls
 
 ---
 Made by Nuno Carvalho (Kuninoto) | nnuno-ca@student.42porto.com  
