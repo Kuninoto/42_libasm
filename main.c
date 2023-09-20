@@ -9,13 +9,26 @@
 
 #define UNEXISTENT_FD 42
 
+size_t ft_strlen(const char *__s);
 ssize_t ft_write(int __fd, const void *__buf, ssize_t __n);
 ssize_t ft_read(int __fd, void *__buf, ssize_t __nbytes);
-size_t ft_strlen(const char *__s);
+char *strcpy(char *dest, const char *src);
 
 int main(void)
 {
-    printf("TESTING FT_STRLEN\n");
+    printf("TESTING FT_STRCPY\n");
+    char s1_ft[] = "bar";
+    char s2_ft[] = "zzz";
+    char s1_og[] = "bar";
+    char s2_og[] = "zzz";
+
+    munit_log(MUNIT_LOG_INFO, "testing return values...");
+    char *ft_strcpy_ret = ft_strcpy(s1_ft, s2_ft);
+    char *strcpy_ret = strcpy(s1_og, s2_og);
+    munit_assert_ulong(ft_strcpy_ret, ==, strcpy_ret);
+    munit_assert_string_equal(ft_strcpy_ret, strcpy_ret);
+
+    /* printf("TESTING FT_STRLEN\n");
     char foo[] = "bar";
 
     munit_log(MUNIT_LOG_INFO, "testing return values...");
