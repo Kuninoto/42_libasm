@@ -11,9 +11,18 @@
 
 ssize_t ft_write(int __fd, const void *__buf, ssize_t __n);
 ssize_t ft_read(int __fd, void *__buf, ssize_t __nbytes);
+size_t ft_strlen(const char *__s);
 
 int main(void)
 {
+    printf("TESTING FT_STRLEN\n");
+    char foo[] = "bar";
+
+    munit_log(MUNIT_LOG_INFO, "testing return values...");
+    size_t ft_strlen_ret = ft_strlen(foo);
+    size_t strlen_ret = strlen(foo);
+    munit_assert_ulong(ft_strlen_ret, ==, strlen_ret);
+
     printf("TESTING FT_WRITE\n");
     char nickname[] = "Kuninoto\n";
 
@@ -31,7 +40,7 @@ int main(void)
     int write_errno = errno;
     munit_assert_string_equal(strerror(ft_write_errno), strerror(write_errno));
     munit_assert_long(ft_write_errno, ==, write_errno);
-    
+
     // EFAULT (14) - Bad Address
     ft_write(STDOUT_FILENO, NULL, 2);
     int ft_write_errno2 = errno;
@@ -70,7 +79,7 @@ int main(void)
     read(file_fd, NULL, 9);
     int read_errno2 = errno;
     munit_assert_string_equal(strerror(ft_read_errno2), strerror(read_errno2));
-    munit_assert_long(ft_read_errno2, ==, read_errno2);
+    munit_assert_long(ft_read_errno2, ==, read_errno2); */
 
     return EXIT_SUCCESS;
 }
