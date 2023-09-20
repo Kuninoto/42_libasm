@@ -12,8 +12,9 @@
 
 ## Useful links
 [You Can Learn Assembly in 10 Minutes (it’s easy)](https://www.youtube.com/watch?v=jPDiaZS-2ok)  
-[Linux System Call Table for x86 64](http://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)  
+[How do I know what registers function parameters will be mapped on?](https://stackoverflow.com/questions/28728742/how-do-i-know-what-registers-function-parameters-will-be-mapped-on)  
 man 2 syscalls
+[Linux System Call Table for x86 64](http://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)  
 
 ---
 Made by Nuno Carvalho (Kuninoto) | nnuno-ca@student.42porto.com  
