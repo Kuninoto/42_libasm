@@ -14,7 +14,7 @@ ft_strcmp:
     jmp while ; Jump unconditionally to the while label
 
 while:
-	
+	; Figure out how to do the && operator
 
 return:
     mov rbp, rsp ; Tear down...
