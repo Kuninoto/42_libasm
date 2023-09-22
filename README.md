@@ -15,6 +15,8 @@
 [How do I know what registers function parameters will be mapped on?](https://stackoverflow.com/questions/28728742/how-do-i-know-what-registers-function-parameters-will-be-mapped-on)  
 man 2 syscalls
 [Linux System Call Table for x86 64](http://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)  
+[x64 ASM Cheat Sheet](https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf)  
+[NASM tutorial](https://cs.lmu.edu/~ray/notes/nasmtutorial/)  
 
 ---
 Made by Nuno Carvalho (Kuninoto) | nnuno-ca@student.42porto.com  

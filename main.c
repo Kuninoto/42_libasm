@@ -12,7 +12,7 @@
 size_t ft_strlen(const char *__s);
 ssize_t ft_write(int __fd, const void *__buf, ssize_t __n);
 ssize_t ft_read(int __fd, void *__buf, ssize_t __nbytes);
-char *strcpy(char *dest, const char *src);
+char *ft_strcpy(char *dest, const char *src);
 
 int main(void)
 {
@@ -25,7 +25,6 @@ int main(void)
     munit_log(MUNIT_LOG_INFO, "testing return values...");
     char *ft_strcpy_ret = ft_strcpy(s1_ft, s2_ft);
     char *strcpy_ret = strcpy(s1_og, s2_og);
-    munit_assert_ulong(ft_strcpy_ret, ==, strcpy_ret);
     munit_assert_string_equal(ft_strcpy_ret, strcpy_ret);
 
     /* printf("TESTING FT_STRLEN\n");
