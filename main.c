@@ -25,6 +25,8 @@ void test_ft_strlen(void)
     size_t ft_strlen_ret = ft_strlen(str);
     size_t strlen_ret = strlen(str);
     munit_assert_ulong(ft_strlen_ret, ==, strlen_ret);
+
+    write(STDOUT_FILENO, "\n", 1);
 };
 
 void test_ft_strcpy(void)
@@ -39,6 +41,8 @@ void test_ft_strcpy(void)
     char *ft_strcpy_ret = ft_strcpy(s1_ft, s2_ft);
     char *strcpy_ret = strcpy(s1_og, s2_og);
     munit_assert_string_equal(ft_strcpy_ret, strcpy_ret);
+
+    write(STDOUT_FILENO, "\n", 1);
 }
 
 void test_ft_strcmp(void)
@@ -57,14 +61,16 @@ void test_ft_strcmp(void)
     int s1_s2_ft_ret = ft_strcmp(s1, s2);
     int s3_s4_ft_ret = ft_strcmp(s3, s4);
 
-    printf("s1_s2_og_ret = %d\n", s1_s2_og_ret);
-    printf("s1_s2_ft_ret = %d\n", s1_s2_ft_ret);
+    //printf("s1_s2_og_ret = %d\n", s1_s2_og_ret);
+    //printf("s1_s2_ft_ret = %d\n", s1_s2_ft_ret);
 
-    printf("s3_s4_og_ret = %d\n", s3_s4_og_ret);
-    printf("s3_s4_ft_ret = %d\n", s3_s4_ft_ret);
+    //printf("s3_s4_og_ret = %d\n", s3_s4_og_ret);
+    //printf("s3_s4_ft_ret = %d\n", s3_s4_ft_ret);
 
     munit_assert_int(s1_s2_og_ret, ==, s1_s2_ft_ret);
     munit_assert_int(s3_s4_og_ret, ==, s3_s4_ft_ret);
+
+    write(STDOUT_FILENO, "\n", 1);
 }
 
 void test_ft_write(void)
@@ -94,6 +100,8 @@ void test_ft_write(void)
     int write_errno2 = errno;
     munit_assert_string_equal(strerror(ft_write_errno2), strerror(write_errno2));
     munit_assert_long(ft_write_errno2, ==, write_errno2);
+
+    write(STDOUT_FILENO, "\n", 1);
 }
 
 void test_ft_read(void)
@@ -112,7 +120,7 @@ void test_ft_read(void)
 
     memset(ft_read_buffer, 0, 9);
     memset(read_buffer, 0, 9);
-    munit_log(MUNIT_LOG_INFO, "testing errno...\n");
+    munit_log(MUNIT_LOG_INFO, "testing errno...");
 
     // EBADF (9) - Bad file descriptor
     ft_read(UNEXISTENT_FD, ft_read_buffer, 9);
@@ -129,6 +137,7 @@ void test_ft_read(void)
     int read_errno2 = errno;
     munit_assert_string_equal(strerror(ft_read_errno2), strerror(read_errno2));
     munit_assert_long(ft_read_errno2, ==, read_errno2);
+    write(STDOUT_FILENO, "\n", 1);
 }
 
 void test_ft_strdup(void)
