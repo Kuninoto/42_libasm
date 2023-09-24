@@ -17,6 +17,7 @@ man 2 syscalls
 [Linux System Call Table for x86 64](http://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)  
 [x64 ASM Cheat Sheet](https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf)  
 [NASM tutorial](https://cs.lmu.edu/~ray/notes/nasmtutorial/)  
+[How does push and pop work in assembly](https://stackoverflow.com/questions/26026174/how-does-push-and-pop-work-in-assembly)  
 
 ---
 Made by Nuno Carvalho (Kuninoto) | nnuno-ca@student.42porto.com  
