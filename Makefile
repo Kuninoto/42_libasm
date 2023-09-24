@@ -1,13 +1,10 @@
 AS = nasm
-ASFLAGS = -f elf64 -g
-# LD = ld
-# LDFLAGS =
+ASFLAGS = -f elf64
 RM = rm -rf
-NAME = libasm
+NAME = libasm.a
 
-GENERAL = ft_write
-
-SRCS = $(addsuffix .s $(GENERAL))
+GENERAL = ft_read ft_strcmp ft_strcpy ft_strdup ft_strlen ft_write
+SRCS = $(addsuffix .s, $(GENERAL))
 
 OBJ_DIR = obj
 OBJS = $(SRCS:%.s=$(OBJ_DIR)/%.o)
@@ -24,7 +21,7 @@ $(OBJ_DIR):
 
 $(OBJ_DIR)/%.o: %.s
 	$(info Assembling...)
-	$(AS) $(ASFLAGS) $(SRCS) $< -o $@
+	$(AS) $(ASFLAGS) -c $< -o $@
 	$(info Done!)
 
 clean:
