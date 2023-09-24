@@ -15,8 +15,8 @@ section .text
         mov rax, 0 ; Move 0 to rax (read syscall number)
         syscall ; Call kernel
 
-        cmp rax, -1 ; Compare the value in rax (return value) with -1
-        je on_error ; Jump if condition evaluated to equal (in case of error a negative value is returned)
+        cmp rax, 0 ; Compare the value in rax (return value) with 0
+        jl on_error ; Jump if condition evaluated to less than (in case of error a negative value is returned)
 
         jmp return
 

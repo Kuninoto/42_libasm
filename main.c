@@ -81,6 +81,7 @@ void test_ft_write(void)
     munit_log(MUNIT_LOG_INFO, "testing return values...");
     ssize_t ft_write_ret = ft_write(STDOUT_FILENO, nickname, 9);
     ssize_t write_ret = write(STDOUT_FILENO, nickname, 9);
+
     munit_assert_long(ft_write_ret, ==, write_ret);
 
     munit_log(MUNIT_LOG_INFO, "testing errno...");

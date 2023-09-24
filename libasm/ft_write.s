@@ -7,7 +7,7 @@
 BITS 64
 extern __errno_location
 
-section .text:
+section .text
     global ft_write
     ft_write:
 	    push rbp ; Estabilish stack frame
@@ -16,8 +16,8 @@ section .text:
 	    mov rax, 1 ; Move 1 to rax (write syscall number) 
 	    syscall ; Call kernel
 
-	    cmp rax, -1 ; Compare the value in rax (return value) with -1
-        je on_error ; Jump if condition evaluated to equal (in case of an error a negative value is returned)
+	    cmp rax, 0 ; Compare the value in rax (return value) with 0
+        jl on_error ; Jump if condition evaluated to less than (in case of an error a negative value is returned)
 
 		jmp return
 
