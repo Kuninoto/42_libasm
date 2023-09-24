@@ -12,7 +12,7 @@ OBJS = $(SRCS:%.s=$(OBJ_DIR)/%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ_DIR) $(OBJS)
-	$(info Archiving libasm...)
+	$(info Assembling and archiving libasm...)
 	ar rc $(NAME) $(OBJS)
 	$(info Done!)
 
@@ -20,9 +20,7 @@ $(OBJ_DIR):
 	mkdir -p obj
 
 $(OBJ_DIR)/%.o: %.s
-	$(info Assembling...)
-	$(AS) $(ASFLAGS) -c $< -o $@
-	$(info Done!)
+	$(AS) $(ASFLAGS) $< -o $@
 
 clean:
 	$(RM) $(OBJ_DIR)
@@ -35,3 +33,4 @@ re: fclean all
 bonus:
 
 .PHONY: all libasm obj clean fclean re bonus
+.SILENT:
