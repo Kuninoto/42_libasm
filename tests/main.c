@@ -5,8 +5,8 @@
 #include <string.h>
 #include <memory.h>
 #include <fcntl.h>
-#include "./munit/munit.h"
-#include "./libasm/libasm.h"
+#include "../munit/munit.h"
+#include "../libasm/libasm.h"
 
 #define UNEXISTENT_FD 231031
 
