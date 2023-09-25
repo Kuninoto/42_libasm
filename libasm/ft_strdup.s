@@ -12,17 +12,17 @@ section .text
         push rbp ; Estabilish stack frame
 	    mov rbp, rsp ; Setup the base pointer
 
-        push rdi
+        push rdi ; Save s ptr
         call ft_strlen ; Call ft_strlen to get the length of s
         inc rax ; Increment the value of rax (returned value of ft_strlen) to account for the null byte
 
         mov rdi, rax ; Move the length that we want to the first arg of malloc
         call malloc WRT ..plt ; Call malloc
         cmp rax, 0x00 ; Compare the return value of malloc with NULL
-        je return ; If expression evaluated to true, return NULL
+        je return ; Jump if equal
 
         mov rdi, rax ; Move the value in rax (returned ptr from malloc) to the rdi (the first argument of ft_strcpy)
-        pop rsi
+        pop rsi ; Retrieve s ptr
         call ft_strcpy ; Call ft_strcpy
         jmp return ; Jump unconditionally to return
 

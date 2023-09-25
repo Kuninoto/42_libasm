@@ -19,7 +19,7 @@ section .text
 	    cmp rax, 0 ; Compare the value in rax (return value) with 0
         jl on_error ; Jump if condition evaluated to less than (in case of an error a negative value is returned)
 
-		jmp return
+		jmp return ; Jump unconditionally
 
     on_error:
     	neg rax ; Get the absolute value of the return value
@@ -28,7 +28,7 @@ section .text
         mov [rax], rdi  ; Dereference errno's address and set it to value of rdi (where we stored the absolute return value, which is our error number)
         mov rax, -1 ; Move -1 to rax so that the caller receives -1 as the return value
 
-		jmp return
+		jmp return ; Jump unconditionally
 
     return:
         mov rbp, rsp ; Tear down...
