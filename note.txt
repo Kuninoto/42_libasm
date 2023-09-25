@@ -1,2 +1,0 @@
-nasm -f elf64 ft_write.s
-ld ft_write.o -o ft_write && ./ft_write  
