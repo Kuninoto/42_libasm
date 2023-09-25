@@ -6,15 +6,9 @@
 #include <memory.h>
 #include <fcntl.h>
 #include "./munit/munit.h"
+#include "./libasm/libasm.h"
 
 #define UNEXISTENT_FD 231031
-
-size_t ft_strlen(const char *__s);
-char *ft_strcpy(char *dest, const char *src);
-int ft_strcmp(const char *__s1, const char *__s2);
-ssize_t ft_write(int __fd, const void *__buf, ssize_t __n);
-ssize_t ft_read(int __fd, void *__buf, ssize_t __nbytes);
-char *ft_strdup(const char *s);
 
 void test_ft_strlen(void)
 {
@@ -214,8 +208,8 @@ void test_ft_strdup(void)
     // printf("%s\n", s3_og_ret);
     // printf("%s\n", s3_ft_ret);
 
-    //printf("%s\n", s4_og_ret);
-    //printf("%s\n", s4_ft_ret);
+    // printf("%s\n", s4_og_ret);
+    // printf("%s\n", s4_ft_ret);
 
     free(s1_og_ret);
     free(s1_ft_ret);
