@@ -46,5 +46,5 @@ A few string manipulation functions and libc system calls wrappers written in As
 [Godbolt](https://godbolt.org/)  
 
 ---
-Made by Nuno Carvalho (Kuninoto) | nnuno-ca@student.42porto.com  
+Made by Nuno Carvalho (Kuninoto) | kuninoto@proton.me  
 <div id="badge"> <a href="https://www.linkedin.com/in/nuno-carvalho-218822247"/> <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>&nbsp;
