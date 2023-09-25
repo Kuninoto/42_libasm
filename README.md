@@ -9,7 +9,7 @@ A few string manipulation functions and libc system calls wrappers written in As
 1- Clone this repository
 	
 	git clone https://github.com/Kuninoto/42_libasm
-2- Navigate to _lvl_0_libft_ and run `make`
+2- Navigate to _libasm_ and run `make`
 	
 	cd 42_libasm/libasm && make
 3- `make clean` so that you don't keep those object files that you won't need anymore
