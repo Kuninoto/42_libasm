@@ -1,6 +1,6 @@
 # libasm (42Porto - 42Cursus) <img src="https://hackr.io/tutorials/learn-assembly-language/logo/logo-assembly-language?ver=1557983975" title="ASM" alt="ASM Logo" width="55" height="55" align="right" />&nbsp; 
 
-## Grade: ?/100
+## Grade: ?/100 (Waiting for evaluation)
 
 ### Overview
 A few string manipulation functions and libc system calls wrappers written in Assembly x86_64 with the Intel syntax
