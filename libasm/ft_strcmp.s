@@ -14,14 +14,14 @@ section .text
 
     while:
         cmp BYTE[rdi], 0 ; Compare the byte in rdi with 0 (to check if it is a null byte)
-        je return ; Jump if condition evaluates to true
-
+        je return ; Jump if equal
+        
         cmp BYTE[rsi], 0 ; Compare the byte in rsi with 0 (to check if it is a null byte)
-        je return ; Jump if condition evaluates to true
+        je return ; Jump if equal
 
         mov ah, BYTE[rsi] ; Move the current char on __s2 to ah (serves as a temp variable)
         cmp BYTE[rdi], ah ; Compare the current chars on both strings
-        jne return ; Jump if condition evaluates to false
+        jne return ; Jump if not equal
 
         inc rdi ; Increment rdi (our s1 ptr)
         inc rsi ; Increment rsi (our s2 ptr)

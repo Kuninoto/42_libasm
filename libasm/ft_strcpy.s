@@ -15,13 +15,13 @@ section .text
 
     while:
         cmp BYTE[rsi+rcx], 0 ; Compare the byte in rsi+rcx with 0 (to check if it is a null byte)
-        je return ; If condition evaluates to true jump to return label
+        je return ; ; Jump if equal
 
         mov ah, BYTE[rsi+rcx] ; Move the current char on src to ah (serves as a temp variable)
         mov BYTE[rdi+rcx], ah ; Move the char that came from src to dest
 
         inc rcx ; Increment rcx (our indexing variable)
-        jmp while ; Jump back to the while block
+        jmp while ; Jump unconditionally to the while label
 
     return:
         mov BYTE[rdi+rcx], 0 ; null-terminate the dest src

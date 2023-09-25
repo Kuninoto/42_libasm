@@ -15,6 +15,7 @@ int ft_strcmp(const char *__s1, const char *__s2);
 ssize_t ft_write(int __fd, const void *__buf, ssize_t __n);
 ssize_t ft_read(int __fd, void *__buf, ssize_t __nbytes);
 char *ft_strdup(const char *s);
+int ft_atoi_base(char *str, char *base);
 
 void test_ft_strlen(void)
 {
@@ -34,6 +35,7 @@ void test_ft_strcpy(void)
     printf("TESTING FT_STRCPY\n");
     char s1_ft[] = "bar";
     char s2_ft[] = "zzz";
+
     char s1_og[] = "bar";
     char s2_og[] = "zzz";
 
@@ -41,6 +43,12 @@ void test_ft_strcpy(void)
     char *ft_strcpy_ret = ft_strcpy(s1_ft, s2_ft);
     char *strcpy_ret = strcpy(s1_og, s2_og);
     munit_assert_string_equal(ft_strcpy_ret, strcpy_ret);
+
+    munit_assert_string_equal(s1_ft, s2_ft);
+    munit_assert_string_equal(s1_og, s2_og);
+
+    munit_assert_string_equal(s1_og, s1_ft);
+    munit_assert_string_equal(s2_og, s2_ft);
 
     write(STDOUT_FILENO, "\n", 1);
 }

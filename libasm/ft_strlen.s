@@ -15,10 +15,10 @@ section .text
 
     while:
         cmp BYTE[rdi+rcx], 0 ; Compare the byte in rdi+rcx with 0 (to check if it is a null byte)
-        je return ; if condition evaluates to true jump to return label
+        je return ; Jump if equal
 
         inc rcx ; Increment rcx (our indexing variable)
-        jmp while ; Jump back to the while block
+        jmp while ; Jump unconditionally to the while block
 
     return:
         mov rax, rcx ; Move the value of rcx to rax to return its value to the caller

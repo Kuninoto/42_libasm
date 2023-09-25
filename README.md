@@ -18,6 +18,8 @@
 [x64 ASM Cheat Sheet](https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf)  
 [NASM tutorial](https://cs.lmu.edu/~ray/notes/nasmtutorial/)  
 [How does push and pop work in assembly](https://stackoverflow.com/questions/26026174/how-does-push-and-pop-work-in-assembly)  
+[CPU Registers x86](https://wiki.osdev.org/CPU_Registers_x86)  
+[Godbolt](https://godbolt.org/)  
 
 ---
 Made by Nuno Carvalho (Kuninoto) | nnuno-ca@student.42porto.com  

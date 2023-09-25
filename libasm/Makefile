@@ -30,7 +30,5 @@ fclean: clean
 
 re: fclean all
 
-bonus:
-
 .PHONY: all libasm obj clean fclean re bonus
 .SILENT:
