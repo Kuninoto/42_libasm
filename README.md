@@ -1,9 +1,9 @@
 # libasm (42Porto - 42Cursus) <img src="https://hackr.io/tutorials/learn-assembly-language/logo/logo-assembly-language?ver=1557983975" title="ASM" alt="ASM Logo" width="55" height="55" align="right" />&nbsp; 
 
-## Grade: ?/100 (Waiting for evaluation)
+## Grade: 100/100
 
 ### Overview
-A few string manipulation functions and libc system calls wrappers written in Assembly x86_64 with the Intel syntax
+A few string manipulation functions and libc system call wrappers written in Assembly x86_64 with the Intel syntax
 
 ### Installing and running the project:
 1- Clone this repository
@@ -29,7 +29,7 @@ A few string manipulation functions and libc system calls wrappers written in As
 `make re` - Deletes everything (object files and _libasm.a_) and rebuilds _libasm.a_
 #### Adding new functions to this library:
   - Add their prototypes to _libasm.h_
-  - Add their source files to _libasm_
+  - Add their source files to /libasm
   - Add their source file names to the "GENERAL" variable inside the Makefile   
   - Rebuild the library with `make re`
 ##### To keep track of what's inside your resulting _libasm.a_ run `ar -t libasm.a` 
