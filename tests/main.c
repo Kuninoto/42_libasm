@@ -6,12 +6,11 @@
 #include <memory.h>
 #include <fcntl.h>
 #include "../munit/munit.h"
-#include "../libasm/libasm.h"
+#include "libasm.h"
 
 #define UNEXISTENT_FD 231031
 
-void test_ft_strlen(void)
-{
+void test_ft_strlen(void) {
     printf("TESTING FT_STRLEN\n");
     char str[] = "foo";
     char empty[] = "";
@@ -30,8 +29,7 @@ void test_ft_strlen(void)
     write(STDOUT_FILENO, "\n", 1);
 };
 
-void test_ft_strcpy(void)
-{
+void test_ft_strcpy(void) {
     printf("TESTING FT_STRCPY\n");
     char s1_ft[] = "bar";
     char s2_ft[] = "zzz";
@@ -53,8 +51,7 @@ void test_ft_strcpy(void)
     write(STDOUT_FILENO, "\n", 1);
 }
 
-void test_ft_strcmp(void)
-{
+void test_ft_strcmp(void) {
     printf("TESTING FT_STRCMP\n");
     char s1[] = "bar";
     char s2[] = "bar";
@@ -90,8 +87,7 @@ void test_ft_strcmp(void)
     write(STDOUT_FILENO, "\n", 1);
 }
 
-void test_ft_write(void)
-{
+void test_ft_write(void) {
     printf("TESTING FT_WRITE\n");
     char nickname[] = "Kuninoto\n";
 
@@ -128,8 +124,7 @@ void test_ft_write(void)
     write(STDOUT_FILENO, "\n", 1);
 }
 
-void test_ft_read(void)
-{
+void test_ft_read(void) {
     printf("TESTING FT_READ\n");
     int file_fd = open("foo.txt", O_RDONLY);
     char *ft_read_buffer = malloc(9 * sizeof(char));
@@ -173,8 +168,7 @@ void test_ft_read(void)
     write(STDOUT_FILENO, "\n", 1);
 }
 
-void test_ft_strdup(void)
-{
+void test_ft_strdup(void) {
     printf("TESTING FT_STRDUP\n");
     char s1[] = "foo";
     char s2[] = "bar";
@@ -224,8 +218,7 @@ void test_ft_strdup(void)
     free(s4_ft_ret);
 }
 
-int main(void)
-{
+int main(void) {
     test_ft_strlen();
     test_ft_strcpy();
     test_ft_strcmp();
