@@ -2,7 +2,7 @@
 
 ## Description  
 
-A few string manipulation functions and libc system call wrappers written in Assembly x86_64 with the Intel syntax
+A few string manipulation functions and libc system call wrappers written in x86_64 Assembly with the Intel syntax
 
 ### Grade: 100/100  
 
